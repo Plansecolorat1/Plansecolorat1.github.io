@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planse Colorat - Fise de colorat pentru copii si adulti</title>
+  <meta name="description" content="Planse-colorat.com - Planse de colorat pentru copii si adulti. O colecție vastă de planșe de colorat gratuite, personaje, animale, natură și multe altele.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Roboto, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #fdf6f0 0%, #f8eee8 100%);
+      color: #2d1f14;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER - Center style ===== */
+    .header {
+      text-align: center;
+      padding: 30px 0 25px;
+      margin-bottom: 35px;
+      border-bottom: 2px solid rgba(180, 80, 50, 0.06);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+      border-radius: 50%;
+      border: 3px solid rgba(180, 80, 50, 0.08);
+      padding: 2px;
+      background: white;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #2d1f14;
+      letter-spacing: -0.5px;
+    }
+
+    .logo h1 span {
+      color: #b45032;
+    }
+
+    .logo p {
+      font-size: 0.8rem;
+      color: #7a6a5a;
+      margin-top: 2px;
+      font-weight: 400;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #b45032, #d46a4a);
+      color: white;
+      padding: 6px 28px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 4px 25px rgba(180, 80, 50, 0.12);
+      margin-top: 6px;
+    }
+
+    /* ===== HERO - Layout zigzag ===== */
+    .hero {
+      background: white;
+      border-radius: 40px;
+      padding: 45px 50px 35px;
+      margin-bottom: 45px;
+      box-shadow: 0 20px 60px rgba(180, 80, 50, 0.03);
+      border: 1px solid rgba(180, 80, 50, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '✦ ✧ ✦';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 5rem;
+      color: #b45032;
+      opacity: 0.02;
+      letter-spacing: 20px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .hero-left .badge {
+      background: rgba(180, 80, 50, 0.04);
+      border: 1px solid rgba(180, 80, 50, 0.06);
+      color: #b45032;
+      padding: 4px 18px;
+      border-radius: 50px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hero-left h2 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 12px;
+      color: #2d1f14;
+      letter-spacing: -1.5px;
+    }
+
+    .hero-left h2 em {
+      color: #b45032;
+      font-style: normal;
+      background: rgba(180, 80, 50, 0.03);
+      padding: 0 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .hero-left p {
+      font-size: 1rem;
+      color: #4a3a2a;
+      margin-bottom: 18px;
+      max-width: 500px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 30px;
+    }
+
+    .hero-stats .stat .number {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #b45032;
+      line-height: 1;
+    }
+
+    .hero-stats .stat .label {
+      font-size: 0.7rem;
+      color: #7a6a5a;
+      font-weight: 500;
+      display: block;
+    }
+
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(180, 80, 50, 0.02);
+      border-radius: 20px;
+      padding: 15px;
+      border: 1px solid rgba(180, 80, 50, 0.03);
+    }
+
+    .hero-right img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      border-radius: 16px;
+      filter: drop-shadow(0 10px 30px rgba(180, 80, 50, 0.04));
+    }
+
+    /* ===== FEATURES - Dạng icon circle ===== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 45px;
+    }
+
+    .feature-item {
+      background: white;
+      padding: 22px 14px 20px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(180, 80, 50, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(180, 80, 50, 0.04);
+      border-color: rgba(180, 80, 50, 0.06);
+    }
+
+    .feature-item .icon-wrap {
+      width: 56px;
+      height: 56px;
+      background: rgba(180, 80, 50, 0.04);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover .icon-wrap {
+      background: rgba(180, 80, 50, 0.08);
+      transform: scale(1.05);
+    }
+
+    .feature-item h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #2d1f14;
+    }
+
+    .feature-item p {
+      font-size: 0.72rem;
+      color: #7a6a5a;
+      margin-top: 2px;
+    }
+
+    /* ===== ABOUT - Layout 3 cột ===== */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .about-main {
+      background: white;
+      padding: 30px 35px;
+      border-radius: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(180, 80, 50, 0.03);
+      position: relative;
+    }
+
+    .about-main::after {
+      content: '✧';
+      position: absolute;
+      bottom: 12px;
+      right: 18px;
+      font-size: 3.5rem;
+      color: #b45032;
+      opacity: 0.02;
+    }
+
+    .about-main h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #2d1f14;
+      letter-spacing: -0.5px;
+    }
+
+    .about-main h3 span {
+      color: #b45032;
+    }
+
+    .about-main p {
+      font-size: 0.88rem;
+      color: #4a3a2a;
+      margin-bottom: 6px;
+    }
+
+    .about-main strong {
+      color: #b45032;
+    }
+
+    .about-side {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .about-side .info-card {
+      background: white;
+      padding: 18px 22px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(180, 80, 50, 0.03);
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .about-side .info-card:hover {
+      border-color: rgba(180, 80, 50, 0.06);
+      transform: translateX(4px);
+    }
+
+    .about-side .info-card .icon-box {
+      width: 40px;
+      height: 40px;
+      background: rgba(180, 80, 50, 0.04);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .about-side .info-card .content .label {
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #9a8a7a;
+      font-weight: 600;
+      display: block;
+    }
+
+    .about-side .info-card .content .value {
+      font-size: 0.82rem;
+      color: #2d1f14;
+      font-weight: 500;
+    }
+
+    .about-side .info-card .content .value a {
+      color: #2d1f14;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(180, 80, 50, 0.06);
+      transition: 0.2s;
+    }
+
+    .about-side .info-card .content .value a:hover {
+      color: #b45032;
+      border-bottom-color: #b45032;
+    }
+
+    .about-side .info-card .content .value .address-text {
+      color: #2d1f14;
+      font-size: 0.75rem;
+    }
+
+    /* ===== SOCIAL - 3 cột ===== */
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      margin: 25px 0 30px;
+    }
+
+    .social-card {
+      background: white;
+      border-radius: 24px;
+      padding: 20px 20px 22px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(180, 80, 50, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .social-card:hover {
+      border-color: rgba(180, 80, 50, 0.05);
+      box-shadow: 0 8px 30px rgba(180, 80, 50, 0.02);
+      transform: translateY(-3px);
+    }
+
+    .social-card .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(180, 80, 50, 0.03);
+      margin-bottom: 10px;
+    }
+
+    .social-card .card-header .title {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #2d1f14;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .social-card .card-header .count {
+      background: linear-gradient(135deg, #b45032, #d46a4a);
+      color: white;
+      font-size: 0.55rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .social-list a {
+      color: #4a3a2a;
+      text-decoration: none;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 6px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .social-list a:hover {
+      background: rgba(180, 80, 50, 0.02);
+      color: #2d1f14;
+      padding-left: 10px;
+    }
+
+    .social-list .icon-sm {
+      font-size: 0.85rem;
+      width: 22px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .social-list .link-text {
+      word-break: break-all;
+      font-size: 0.7rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      margin-top: 40px;
+      padding: 25px 0 15px;
+      border-top: 2px solid rgba(180, 80, 50, 0.04);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #7a6a5a;
+    }
+
+    .footer a {
+      color: #2d1f14;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(180, 80, 50, 0.04);
+      padding-bottom: 2px;
+      transition: 0.2s;
+    }
+
+    .footer a:hover {
+      color: #b45032;
+      border-bottom-color: #b45032;
+    }
+
+    .footer .footer-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .hero-right img {
+        max-height: 180px;
+      }
+
+      .about-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header {
+        padding: 20px 0 15px;
+      }
+
+      .logo {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo img {
+        height: 45px;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero {
+        padding: 25px 20px;
+        border-radius: 28px;
+      }
+
+      .hero-left h2 {
+        font-size: 2rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-main {
+        padding: 20px 18px;
+      }
+
+      .about-side .info-card {
+        padding: 14px 16px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-card {
+        padding: 16px;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .footer .footer-links {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-left h2 {
+        font-size: 1.5rem;
+      }
+
+      .header-badge {
+        font-size: 0.65rem;
+        padding: 5px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="logo">
+        <img src="logo.jpg" alt="Planse Colorat logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2252%22 height=%2252%22 viewBox=%220 0 52 52%22%3E%3Crect width=%2252%22 height=%2252%22 rx=%2226%22 fill=%22%23b45032%22/%3E%3Ctext x=%2226%22 y=%2233%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22white%22%3EP%3C/text%3E%3C/svg%3E'">
+        <div>
+          <h1><span>Planse</span> Colorat</h1>
+          <p>Fise de colorat pentru copii si adulti</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        🎨 Începe să colorezi
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="badge">✨ Explorează creativitatea</span>
+          <h2>Planse de <em>colorat pentru toți</em></h2>
+          <p>O colecție vastă de planșe de colorat pentru copii și adulți – personaje, animale, natură, vehicule, sărbători și desene educative.</p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="number">1000+</span>
+              <span class="label">Planse de colorat</span>
+            </div>
+            <div class="stat">
+              <span class="number">20+</span>
+              <span class="label">Categorii</span>
+            </div>
+            <div class="stat">
+              <span class="number">∞</span>
+              <span class="label">Creativitate</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="banner.png" alt="Planse Colorat banner" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23fdf6f0%22 rx=%2216%22/%3E%3Ctext x=%22150%22 y=%22100%22 text-anchor=%22middle%22 font-size=%2230%22 fill=%22%23b45032%22%3E🎨%3C/text%3E%3Ctext x=%22150%22 y=%22140%22 text-anchor=%22middle%22 font-size=%2214%22 fill=%22%237a6a5a%22%3EPlanse%20Colorat%3C/text%3E%3C/svg%3E'">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <div class="features">
+      <div class="feature-item">
+        <div class="icon-wrap">🖨️</div>
+        <h4>Imprimare ușoară</h4>
+        <p>Descarcă și printează cu un singur click</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap">📱</div>
+        <h4>Toate dispozitivele</h4>
+        <p>PC, tabletă și mobil</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap">🧩</div>
+        <h4>Dezvoltare abilități</h4>
+        <p>Motorica fină, concentrare</p>
+      </div>
+      <div class="feature-item">
+        <div class="icon-wrap">🛡️</div>
+        <h4>Mediu sigur</h4>
+        <p>Conținut pentru întreaga familie</p>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <div class="about-wrap">
+      <div class="about-main">
+        <h3>🌱 Despre <span>Planse-Colorat</span>.com</h3>
+        <p><strong>Planse-colorat.com</strong> este o platformă dedicată tuturor celor care iubesc desenul și activitățile creative, oferind o colecție vastă de planșe de colorat pentru copii și adulți. Indiferent dacă sunteți în căutarea unor personaje îndrăgite, animale, natură, vehicule, sărbători sau desene educative, aici veți găsi întotdeauna materiale potrivite pentru orice vârstă și nivel de experiență.</p>
+        <p>Toate planșele pot fi descărcate, imprimate și colorate cu ușurință, transformând timpul liber într-o activitate relaxantă și distractivă. Prin actualizări constante și categorii variate, Planse-colorat.com își propune să inspire creativitatea, imaginația și bucuria de a crea în fiecare zi.</p>
+        <p>✔ Vă invităm cu drag să vă alăturați comunității și să descoperiți universul fascinant al culorilor.</p>
+      </div>
+      <div class="about-side">
+        <div class="info-card">
+          <div class="icon-box">🌐</div>
+          <div class="content">
+            <span class="label">Website</span>
+            <div class="value">
+              <a href="https://planse-colorat.com/" target="_blank">planse-colorat.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon-box">📍</div>
+          <div class="content">
+            <span class="label">Adresă</span>
+            <div class="value">
+              <span class="address-text">Cartierul Armenesc, Bucharest, Romania</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SOCIAL BLOCKS ===== -->
+    <div class="social-grid">
+      <!-- Block 1 -->
+      <div class="social-card">
+        <div class="card-header">
+          <span class="title">🌐 Other blog networking sites</span>
+          <span class="count">1/3</span>
+        </div>
+        <div class="social-list">
+          <a href="https://planse-colorat.blogspot.com/" target="_blank">
+            <span class="icon-sm">📝</span>
+            <span class="link-text">planse-colorat.blogspot.com/</span>
+          </a>
+          <a href="https://Plansecolorat1.github.io/" target="_blank">
+            <span class="icon-sm">🐙</span>
+            <span class="link-text">Plansecolorat1.github.io/</span>
+          </a>
+          <a href="https://sites.google.com/view/plansecolorat" target="_blank">
+            <span class="icon-sm">🔗</span>
+            <span class="link-text">sites.google.com/view/plansecolorat</span>
+          </a>
+          <a href="https://plansecolorat.tumblr.com/" target="_blank">
+            <span class="icon-sm">📷</span>
+            <span class="link-text">plansecolorat.tumblr.com/</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="social-card">
+        <div class="card-header">
+          <span class="title">🌐 Other blog networking sites</span>
+          <span class="count">2/3</span>
+        </div>
+        <div class="social-list">
+          <a href="https://coloratplanse.wixsite.com/plansecolorat/" target="_blank">
+            <span class="icon-sm">🎨</span>
+            <span class="link-text">coloratplanse.wixsite.com/plansecolorat/</span>
+          </a>
+          <a href="https://plansecolorat2.wordpress.com/" target="_blank">
+            <span class="icon-sm">📄</span>
+            <span class="link-text">plansecolorat2.wordpress.com/</span>
+          </a>
+          <a href="https://plansecolorat.quora.com/" target="_blank">
+            <span class="icon-sm">❓</span>
+            <span class="link-text">plansecolorat.quora.com/</span>
+          </a>
+          <a href="https://plansecolorat.livejournal.com/profile/" target="_blank">
+            <span class="icon-sm">📓</span>
+            <span class="link-text">plansecolorat.livejournal.com/</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="social-card">
+        <div class="card-header">
+          <span class="title">🌐 Other blog networking sites</span>
+          <span class="count">3/3</span>
+        </div>
+        <div class="social-list">
+          <a href="https://plansecolorat.hashnode.dev/" target="_blank">
+            <span class="icon-sm">💻</span>
+            <span class="link-text">plansecolorat.hashnode.dev/</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SOCIAL MEDIA - 7 link ===== -->
+    <div style="background: white; border-radius: 24px; padding: 22px 28px; margin: 10px 0 30px; border: 1px solid rgba(180, 80, 50, 0.03); box-shadow: 0 4px 20px rgba(0,0,0,0.02);">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 2px solid rgba(180, 80, 50, 0.03); margin-bottom: 12px;">
+        <span style="font-weight: 700; font-size: 0.85rem; color: #2d1f14; display: flex; align-items: center; gap: 8px;">🌐 Social Media</span>
+        <span style="background: linear-gradient(135deg, #b45032, #d46a4a); color: white; font-size: 0.55rem; padding: 2px 12px; border-radius: 20px; font-weight: 700;">7</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px;">
+        <a href="https://www.facebook.com/plansecolorat/" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">📘</span>
+          <span style="word-break: break-all;">facebook.com/plansecolorat/</span>
+        </a>
+        <a href="https://ro.pinterest.com/plansecolorat/" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">📌</span>
+          <span style="word-break: break-all;">ro.pinterest.com/plansecolorat/</span>
+        </a>
+        <a href="https://x.com/planse_colorat" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">🐦</span>
+          <span style="word-break: break-all;">x.com/planse_colorat</span>
+        </a>
+        <a href="https://www.linkedin.com/in/plansecolorat/" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">🔗</span>
+          <span style="word-break: break-all;">linkedin.com/in/plansecolorat/</span>
+        </a>
+        <a href="https://www.instagram.com/plansecolorat/" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">📸</span>
+          <span style="word-break: break-all;">instagram.com/plansecolorat/</span>
+        </a>
+        <a href="https://www.youtube.com/@plansecolorat" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">▶️</span>
+          <span style="word-break: break-all;">youtube.com/@plansecolorat</span>
+        </a>
+        <a href="https://github.com/Plansecolorat1" target="_blank" style="color: #4a3a2a; text-decoration: none; font-size: 0.78rem; display: flex; align-items: center; gap: 10px; padding: 3px 6px; border-radius: 8px; transition: all 0.2s ease;">
+          <span style="font-size: 0.85rem; width: 22px; text-align: center;">🐙</span>
+          <span style="word-break: break-all;">github.com/Plansecolorat1</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div>
+        <strong>Planse-Colorat.com</strong> © 2026
+      </div>
+      <div class="footer-links">
+        <a href="https://planse-colorat.com/" target="_blank">planse-colorat.com</a>
+        <span style="color:#c8b8a8;">|</span>
+        <span style="color:#9a8a7a;">Toate drepturile rezervate</span>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
